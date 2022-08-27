@@ -1,0 +1,37 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "components:start": "lerna run start --scope=@better-design/components",
+    "components:generate": "cd ./packages/components && pnpm run generate",
+    "docs:start": "dumi dev",
+    "docs:build": "dumi build",
+    "release": "standard-version",
+    "commit": "git cz",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "commitizen": "^4.2.5",
+    "cz-customizable": "^6.9.1",
+    "dumi": "^1.1.47",
+    "husky": "^8.0.0",
+    "lerna": "^5.4.3",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "standard-version": "^9.5.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "*": "prettier --write"
+  }
+}
