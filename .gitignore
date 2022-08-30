@@ -1,2 +1,5 @@
 node_modules/
 .umi/
+
+packages/core/www
+packages/core/dist
