@@ -1,4 +1,4 @@
-export * from '../dist/types/components'
+export * from '../dist/types/core'
 export interface CustomElementsDefineOptions {
   exclude?: string[]
   resourcesUrl?: string

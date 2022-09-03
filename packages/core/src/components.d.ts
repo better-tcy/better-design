@@ -5,30 +5,16 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal'
-export namespace Components {
-  interface TestCom {}
-}
+export namespace Components {}
 declare global {
-  interface HTMLTestComElement extends Components.TestCom, HTMLStencilElement {}
-  var HTMLTestComElement: {
-    prototype: HTMLTestComElement
-    new (): HTMLTestComElement
-  }
-  interface HTMLElementTagNameMap {
-    'test-com': HTMLTestComElement
-  }
+  interface HTMLElementTagNameMap {}
 }
 declare namespace LocalJSX {
-  interface TestCom {}
-  interface IntrinsicElements {
-    'test-com': TestCom
-  }
+  interface IntrinsicElements {}
 }
 export { LocalJSX as JSX }
 declare module '@stencil/core' {
   export namespace JSX {
-    interface IntrinsicElements {
-      'test-com': LocalJSX.TestCom & JSXBase.HTMLAttributes<HTMLTestComElement>
-    }
+    interface IntrinsicElements {}
   }
 }

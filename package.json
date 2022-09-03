@@ -5,8 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "components:start": "lerna run start --scope=@better-design/components",
-    "components:generate": "cd ./packages/components && pnpm run generate",
+    "core:start": "lerna run start --scope=@better-design/core",
+    "core:generate": "cd ./packages/core && pnpm run generate",
     "docs:start": "dumi dev",
     "docs:build": "dumi build",
     "release": "standard-version",

@@ -2841,17 +2841,6 @@ packages:
       '@types/yargs-parser': 21.0.0
     dev: true
 
-  /@types/yauzl/2.10.0:
-    resolution:
-      {
-        integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==
-      }
-    requiresBuild: true
-    dependencies:
-      '@types/node': 18.7.8
-    dev: true
-    optional: true
-
   /@umijs/ast/3.5.33:
     resolution:
       {
@@ -6404,7 +6393,7 @@ packages:
       esutils: 2.0.3
       optionator: 0.8.3
     optionalDependencies:
-      source-map: 0.6.1
+      source-map: registry.npmmirror.com/source-map/0.6.1
     dev: true
 
   /esm/3.2.25:
@@ -6615,7 +6604,7 @@ packages:
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
-      '@types/yauzl': 2.10.0
+      '@types/yauzl': registry.npmmirror.com/@types/yauzl/2.10.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8957,7 +8946,7 @@ packages:
       micromatch: 4.0.5
       walker: 1.0.8
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
 
   /jest-jasmine2/27.5.1:
@@ -16243,3 +16232,45 @@ packages:
         integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==
       }
     dev: true
+
+  registry.npmmirror.com/@types/yauzl/2.10.0:
+    resolution:
+      {
+        integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==,
+        registry: https://packages.aliyun.com/5eeb0689892c58bb7c394ab5/npm/npm-registry/,
+        tarball: https://registry.npmmirror.com/@types/yauzl/-/yauzl-2.10.0.tgz
+      }
+    name: '@types/yauzl'
+    version: 2.10.0
+    requiresBuild: true
+    dependencies:
+      '@types/node': 18.7.8
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/fsevents/2.3.2:
+    resolution:
+      {
+        integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==,
+        registry: https://packages.aliyun.com/5eeb0689892c58bb7c394ab5/npm/npm-registry/,
+        tarball: https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz
+      }
+    name: fsevents
+    version: 2.3.2
+    engines: { node: ^8.16.0 || ^10.6.0 || >=11.0.0 }
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/source-map/0.6.1:
+    resolution:
+      {
+        integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==,
+        registry: https://packages.aliyun.com/5eeb0689892c58bb7c394ab5/npm/npm-registry/,
+        tarball: https://registry.npmmirror.com/source-map/-/source-map-0.6.1.tgz
+      }
+    name: source-map
+    version: 0.6.1
+    engines: { node: '>=0.10.0' }
+    dev: true
+    optional: true
