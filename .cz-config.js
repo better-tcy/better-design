@@ -19,7 +19,7 @@ module.exports = {
     { value: 'test', name: 'test: 测试相关变更' },
     { value: 'build', name: 'build: 变更项目构建或外部依赖：例如 webpack、gulp、npm 等' },
     { value: 'ci', name: 'ci: 更改持续集成软件的配置文件和 package 中的 scripts 命令' },
-    { value: 'chore', name: 'chore: 变更项目构建或外部依赖：例如 webpack、gulp、npm 等' },
+    { value: 'chore', name: 'chore: 杂项（其他无法归类的变更）：比如代码合并' },
     { value: 'revert', name: 'revert: 代码回退' },
     { value: 'update', name: 'update: 第三方库升级' }
   ],
