@@ -6,12 +6,19 @@
  */
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal'
 export namespace Components {
-  interface BtContent {}
-  interface BtFooter {}
+  interface BtContent {
+    otherheight: string
+  }
+  interface BtFooter {
+    height: number | string
+  }
   interface BtHeader {
     height: number | string
   }
-  interface BtLayout {}
+  interface BtLayout {
+    commonFun: (tagName: String, callBack: Function) => Promise<void>
+    setAttributeFun: (el: HTMLElement) => Promise<void>
+  }
   interface BtSider {
     width: number | string
   }
@@ -51,8 +58,12 @@ declare global {
   }
 }
 declare namespace LocalJSX {
-  interface BtContent {}
-  interface BtFooter {}
+  interface BtContent {
+    otherheight?: string
+  }
+  interface BtFooter {
+    height?: number | string
+  }
   interface BtHeader {
     height?: number | string
   }

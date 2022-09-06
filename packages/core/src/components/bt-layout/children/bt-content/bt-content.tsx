@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core'
+import { Component, Host, h, Prop } from '@stencil/core'
 
 @Component({
   tag: 'bt-content',
@@ -6,10 +6,12 @@ import { Component, Host, h } from '@stencil/core'
   shadow: true
 })
 export class BtContent {
+  @Prop() otherheight: string
+
   render() {
     return (
       <Host>
-        <div class="bt-content">
+        <div class="bt-content" style={{ height: `calc(100vh - ${this.otherheight}px)` }}>
           <slot></slot>
         </div>
       </Host>
