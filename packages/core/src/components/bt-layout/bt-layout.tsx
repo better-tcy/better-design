@@ -37,19 +37,19 @@ export class BtLayout {
   }
 
   componentDidLoad() {
-    this.commonFun('BT-HEADER', (el) => {
+    this.commonFun('BT-HEADER', (el: HTMLElement) => {
       this.headerHeight = el.clientHeight
     })
 
-    this.commonFun('BT-FOOTER', (el) => {
+    this.commonFun('BT-FOOTER', (el: HTMLElement) => {
       this.footerHeight = el.clientHeight
     })
 
-    this.commonFun('BT-CONTENT', (el) => {
+    this.commonFun('BT-CONTENT', (el: HTMLElement) => {
       this.setAttributeFun(el)
     })
 
-    this.commonFun('BT-LAYOUT', (el) => {
+    this.commonFun('BT-LAYOUT', (el: HTMLElement) => {
       for (let elItem of el.children) {
         if (elItem.tagName === 'BT-CONTENT') {
           this.setAttributeFun(el)
