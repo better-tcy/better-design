@@ -1,6 +1,9 @@
 import { Config } from '@stencil/core'
+import { sass } from '@stencil/sass'
 
 export const config: Config = {
   namespace: 'core',
-  outputTargets: []
+  globalStyle: 'src/global/variables.scss',
+  outputTargets: [],
+  plugins: [sass()]
 }
