@@ -12,8 +12,8 @@ export class BtLayout {
   @State() headerHeight: number = 0
   @State() footerHeight: number = 0
 
-  commonFun(tagName: String, callBack: Function) {
-    const children = this.el.children
+  commonFun(tagName: String, callBack: Function, el: HTMLElement = this.el) {
+    const children = el.children
 
     for (let elItem of children) {
       if (elItem.tagName === tagName) {
@@ -35,25 +35,49 @@ export class BtLayout {
   }
 
   componentDidLoad() {
-    this.commonFun('BT-HEADER', (el: HTMLElement) => {
-      this.headerHeight = el.clientHeight
+    let isExistLayout = false
+
+    this.commonFun('BT-LAYOUT', () => {
+      isExistLayout = true
     })
 
-    this.commonFun('BT-FOOTER', (el: HTMLElement) => {
-      this.footerHeight = el.clientHeight
-    })
+    // bt-content高度已经在子layout中计算 不需执行以下代码
+    if (isExistLayout) return
+
+    const parentEl = this.el.parentElement
+    let parentIsExistHOrF = false
+
+    this.commonFun(
+      'BT-HEADER',
+      (el: HTMLElement) => {
+        this.headerHeight = el.clientHeight
+        parentIsExistHOrF = true
+      },
+      parentEl
+    )
+
+    this.commonFun(
+      'BT-FOOTER',
+      (el: HTMLElement) => {
+        this.footerHeight = el.clientHeight
+        parentIsExistHOrF = true
+      },
+      parentEl
+    )
+
+    // header和footer在子layout中
+    if (!parentIsExistHOrF) {
+      this.commonFun('BT-HEADER', (el: HTMLElement) => {
+        this.headerHeight = el.clientHeight
+      })
+
+      this.commonFun('BT-FOOTER', (el: HTMLElement) => {
+        this.footerHeight = el.clientHeight
+      })
+    }
 
     this.commonFun('BT-CONTENT', (el: HTMLElement) => {
       this.setAttributeFun(el)
-    })
-
-    this.commonFun('BT-LAYOUT', (el: HTMLElement) => {
-      for (let elItem of el.children) {
-        if (elItem.tagName === 'BT-CONTENT') {
-          this.setAttributeFun(el)
-          break
-        }
-      }
     })
   }
 
