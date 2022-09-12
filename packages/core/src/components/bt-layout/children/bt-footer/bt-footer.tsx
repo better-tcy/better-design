@@ -2,7 +2,7 @@ import { Component, Host, h, Prop } from '@stencil/core'
 
 @Component({
   tag: 'bt-footer',
-  styleUrl: 'bt-footer.css',
+  styleUrl: 'bt-footer.scss',
   shadow: true
 })
 export class BtFooter {

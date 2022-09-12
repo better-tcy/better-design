@@ -2,7 +2,7 @@ import { Component, Host, h, Prop } from '@stencil/core'
 
 @Component({
   tag: 'bt-content',
-  styleUrl: 'bt-content.css',
+  styleUrl: 'bt-content.scss',
   shadow: true
 })
 export class BtContent {
