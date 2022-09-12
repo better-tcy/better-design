@@ -1,4 +1,4 @@
-import { Component, Host, h, Element, State, Method } from '@stencil/core'
+import { Component, Host, h, Element, State } from '@stencil/core'
 
 @Component({
   tag: 'bt-layout',
@@ -12,7 +12,6 @@ export class BtLayout {
   @State() headerHeight: number = 0
   @State() footerHeight: number = 0
 
-  @Method()
   commonFun(tagName: String, callBack: Function) {
     const children = this.el.children
 
@@ -23,7 +22,6 @@ export class BtLayout {
     }
   }
 
-  @Method()
   setAttributeFun(el: HTMLElement) {
     const customAttribute = document.createAttribute('otherheight')
     customAttribute.nodeValue = String(this.headerHeight + this.footerHeight)
