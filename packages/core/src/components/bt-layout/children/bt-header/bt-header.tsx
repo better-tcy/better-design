@@ -11,7 +11,7 @@ export class BtHeader {
   render() {
     return (
       <Host>
-        <div class="bt-herder" style={{ height: this.height + 'px' }}>
+        <div class="bt-header" style={{ height: this.height + 'px' }}>
           <slot></slot>
         </div>
       </Host>
