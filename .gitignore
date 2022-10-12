@@ -4,3 +4,4 @@ node_modules/
 packages/core/www/
 packages/core/dist/
 packages/core/node_modules/
+.DS_Store
