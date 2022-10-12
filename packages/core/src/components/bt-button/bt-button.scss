@@ -1,0 +1,94 @@
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 8px 8px;
+  width: 88px;
+  outline: 0;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.basic {
+  background-color: transparent;
+  transition: background-color 0.1s ease-in-out;
+  &:hover {
+    background-color: #dfdfdf;
+  }
+  &.plain {
+    color: #1a1a1a;
+  }
+  &.primary {
+    color: $default-primary-color;
+  }
+  &.secondary {
+    color: $default-secondary-color;
+  }
+  &.danger {
+    color: $default-danger-color;
+  }
+}
+
+.raised {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.raised,
+.flat {
+  &.primary {
+    background-color: var(--app-primary-color);
+    color: var(--app-primary-text-color, #ffffff);
+  }
+  &.secondary {
+    background-color: var(--app-warning-color);
+    color: var(--app-secondary-text-color, #1a1a1a);
+  }
+  &.danger {
+    background-color: var(--app-danger-color);
+    color: var(--app-danger-text-color, #ffffff);
+  }
+
+  .ripple {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid;
+  transition: background-color 0.1s ease-in-out;
+  &:hover {
+    background-color: #e0e0e0;
+  }
+  &.primary {
+    border-color: var(--app-primary-color);
+    color: var(--app-primary-color);
+  }
+  &.secondary {
+    border-color: var(--app-warning-color);
+    color: var(--app-warning-color);
+  }
+  &.danger {
+    border-color: var(--app-danger-color);
+    color: var(--app-danger-color);
+  }
+}
+
+.ripple {
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(0);
+  position: absolute;
+  opacity: 1;
+  animation: rippleDrop 0.4s linear;
+}
+
+@keyframes rippleDrop {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

@@ -6,19 +6,36 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface BtButton {
+        "color": 'plain' | 'primary' | 'secondary' | 'danger';
+        "type": 'basic' | 'raised' | 'outline' | 'flat';
+    }
 }
 declare global {
+    interface HTMLBtButtonElement extends Components.BtButton, HTMLStencilElement {
+    }
+    var HTMLBtButtonElement: {
+        prototype: HTMLBtButtonElement;
+        new (): HTMLBtButtonElement;
+    };
     interface HTMLElementTagNameMap {
+        "bt-button": HTMLBtButtonElement;
     }
 }
 declare namespace LocalJSX {
+    interface BtButton {
+        "color"?: 'plain' | 'primary' | 'secondary' | 'danger';
+        "type"?: 'basic' | 'raised' | 'outline' | 'flat';
+    }
     interface IntrinsicElements {
+        "bt-button": BtButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "bt-button": LocalJSX.BtButton & JSXBase.HTMLAttributes<HTMLBtButtonElement>;
         }
     }
 }
