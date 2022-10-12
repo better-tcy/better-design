@@ -7,3 +7,4 @@
 /public/*
 .prettierignore
 packages/core/src/components.d.ts
+.gitignore
