@@ -1,8 +1,5 @@
 :host {
   display: block;
   flex: 1;
-
-  .bt-header {
-    background-color: var(--app-warning-color);
-  }
+  background-color: var(--app-warning-color);
 }

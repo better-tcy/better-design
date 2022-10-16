@@ -11,8 +11,8 @@ export class BtSider {
 
   render() {
     return (
-      <Host>
-        <div class="bt-sider" style={{ width: this.width + 'px', background: this.bgcolor }}>
+      <Host style={{ width: this.width + 'px', background: this.bgcolor }}>
+        <div>
           <slot></slot>
         </div>
       </Host>

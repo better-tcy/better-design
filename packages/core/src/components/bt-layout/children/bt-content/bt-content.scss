@@ -1,8 +1,5 @@
 :host {
   display: block;
   flex: 1;
-
-  .bt-content {
-    background-color: var(--app-info-color);
-  }
+  background-color: var(--app-info-color);
 }

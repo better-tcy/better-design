@@ -11,11 +11,8 @@ export class BtContent {
 
   render() {
     return (
-      <Host>
-        <div
-          class="bt-content"
-          style={{ height: `calc(100vh - ${this.otherheight}px)`, background: this.bgcolor }}
-        >
+      <Host style={{ height: `calc(100vh - ${this.otherheight}px)`, background: this.bgcolor }}>
+        <div>
           <slot></slot>
         </div>
       </Host>

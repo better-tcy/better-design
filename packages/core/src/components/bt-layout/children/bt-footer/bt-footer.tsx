@@ -11,8 +11,8 @@ export class BtFooter {
 
   render() {
     return (
-      <Host>
-        <div class="bt-footer" style={{ height: this.height + 'px', background: this.bgcolor }}>
+      <Host style={{ height: this.height + 'px', background: this.bgcolor }}>
+        <div>
           <slot></slot>
         </div>
       </Host>
