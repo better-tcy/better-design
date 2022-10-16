@@ -7,11 +7,12 @@ import { Component, Host, h, Prop } from '@stencil/core'
 })
 export class BtFooter {
   @Prop() height: number | string = 66
+  @Prop() bgcolor: string
 
   render() {
     return (
       <Host>
-        <div class="bt-footer" style={{ height: this.height + 'px' }}>
+        <div class="bt-footer" style={{ height: this.height + 'px', background: this.bgcolor }}>
           <slot></slot>
         </div>
       </Host>

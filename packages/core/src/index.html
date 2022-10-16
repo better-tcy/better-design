@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
-    />
-    <title>better-design</title>
-    <link rel="stylesheet" href="/build/core.css" />
-    <style>
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>better-design</title>
+  <link rel="stylesheet" href="/build/core.css" />
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <bt-layout>
+    <bt-header height="86">header</bt-header>
     <bt-layout>
-      <bt-header height="66">header</bt-header>
-      <bt-layout>
-        <bt-sider>导航</bt-sider>
-        <bt-content>content</bt-content>
-      </bt-layout>
-      <bt-footer height="86">header</bt-footer>
+      <bt-sider>导航</bt-sider>
+      <bt-content>content</bt-content>
     </bt-layout>
+    <bt-footer height="186">header</bt-footer>
+  </bt-layout>
 
-    <script type="module" src="/build/core.esm.js"></script>
-    <script nomodule src="/build/core.js"></script>
-  </body>
+  <script type="module" src="/build/core.esm.js"></script>
+  <script nomodule src="/build/core.js"></script>
+</body>
+
 </html>

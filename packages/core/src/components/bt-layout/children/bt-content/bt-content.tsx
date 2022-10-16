@@ -7,11 +7,15 @@ import { Component, Host, h, Prop } from '@stencil/core'
 })
 export class BtContent {
   @Prop() otherheight: string
+  @Prop() bgcolor: string
 
   render() {
     return (
       <Host>
-        <div class="bt-content" style={{ height: `calc(100vh - ${this.otherheight}px)` }}>
+        <div
+          class="bt-content"
+          style={{ height: `calc(100vh - ${this.otherheight}px)`, background: this.bgcolor }}
+        >
           <slot></slot>
         </div>
       </Host>

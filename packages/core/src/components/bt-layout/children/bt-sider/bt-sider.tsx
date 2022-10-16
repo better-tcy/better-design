@@ -7,11 +7,12 @@ import { Component, Host, h, Prop } from '@stencil/core'
 })
 export class BtSider {
   @Prop() width: number | string = 200
+  @Prop() bgcolor: string
 
   render() {
     return (
       <Host>
-        <div class="bt-sider" style={{ width: this.width + 'px' }}>
+        <div class="bt-sider" style={{ width: this.width + 'px', background: this.bgcolor }}>
           <slot></slot>
         </div>
       </Host>

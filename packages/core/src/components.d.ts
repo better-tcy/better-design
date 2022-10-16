@@ -7,17 +7,21 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface BtContent {
+        "bgcolor": string;
         "otherheight": string;
     }
     interface BtFooter {
+        "bgcolor": string;
         "height": number | string;
     }
     interface BtHeader {
+        "bgcolor": string;
         "height": number | string;
     }
     interface BtLayout {
     }
     interface BtSider {
+        "bgcolor": string;
         "width": number | string;
     }
 }
@@ -62,17 +66,21 @@ declare global {
 }
 declare namespace LocalJSX {
     interface BtContent {
+        "bgcolor"?: string;
         "otherheight"?: string;
     }
     interface BtFooter {
+        "bgcolor"?: string;
         "height"?: number | string;
     }
     interface BtHeader {
+        "bgcolor"?: string;
         "height"?: number | string;
     }
     interface BtLayout {
     }
     interface BtSider {
+        "bgcolor"?: string;
         "width"?: number | string;
     }
     interface IntrinsicElements {
