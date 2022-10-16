@@ -23,7 +23,7 @@ export class BtLayout {
   }
 
   setAttributeFun(el: HTMLElement) {
-    const customAttribute = document.createAttribute('otherheight')
+    const customAttribute = document.createAttribute('otherHeight')
     customAttribute.nodeValue = String(this.headerHeight + this.footerHeight)
     el.attributes.setNamedItem(customAttribute)
   }

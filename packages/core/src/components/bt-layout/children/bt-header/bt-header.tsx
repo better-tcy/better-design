@@ -9,9 +9,6 @@ export class BtHeader {
   @Prop() height: number | string = 66
   @Prop() bgcolor: string
 
-  componentDidLoad() {
-    console.log(this.bgcolor)
-  }
   render() {
     return (
       <Host>
